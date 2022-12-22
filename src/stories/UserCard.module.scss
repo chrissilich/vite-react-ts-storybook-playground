@@ -90,3 +90,40 @@
 		}
 	}
 }
+
+.userCard.userCardPlaceholder {
+	box-shadow: none;
+	pointer-events: none;
+	border: 1px solid rgb(220, 220, 220);
+
+	.userIcon,
+	h3,
+	li,
+	a {
+		color: transparent;
+		border: 0;
+		box-shadow: none;
+		background: linear-gradient(
+			90deg,
+			rgb(240, 240, 240),
+			rgb(240, 240, 240),
+			rgb(230, 230, 230),
+			rgb(230, 230, 230),
+			rgb(240, 240, 240),
+			rgb(240, 240, 240)
+		);
+		background-size: 400% 100%;
+
+		animation: placeholder-gradient 3s linear infinite;
+	}
+}
+
+@keyframes placeholder-gradient {
+	0% {
+		background-position: 100% 50%;
+	}
+	20%,
+	100% {
+		background-position: 0% 50%;
+	}
+}
